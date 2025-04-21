@@ -1,0 +1,51 @@
+/* Style global */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ffffff; /* Tu peux changer cette couleur */
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Logo ou bannière en haut */
+header img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 40px auto 20px;
+}
+
+/* Galerie de gifs */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  font-size: 0.9em;
+  color: #666;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
