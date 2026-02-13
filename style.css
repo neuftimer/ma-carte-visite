@@ -1,4 +1,40 @@
 /* Style global */
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <div class="lightbox-content"></div>
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxContent = document.querySelector(".lightbox-content");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".gallery img, .gallery video").forEach(el => {
+  el.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+
+    if (el.tagName === "IMG") {
+      lightboxContent.innerHTML = `<img src="${el.src}">`;
+    } else {
+      lightboxContent.innerHTML = `<video src="${el.src}" autoplay loop controls></video>`;
+    }
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+  lightboxContent.innerHTML = "";
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+    lightboxContent.innerHTML = "";
+  }
+});
+</script>
+
 body {
   margin: 0;
   font-family: sans-serif;
