@@ -34,6 +34,10 @@ header img {
   height: auto !important;
   display: block;
 }
+.gallery {
+  margin-top: 100px;
+}
+
 
 }
 
