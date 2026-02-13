@@ -33,6 +33,34 @@ lightbox.addEventListener("click", (e) => {
   }
 });
 </script>
+  /* =========================
+   LIGHTBOX
+========================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 85%;
+  max-height: 85%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
 /* Style global */
 
 
