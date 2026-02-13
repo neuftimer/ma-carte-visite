@@ -90,13 +90,38 @@ header img {
 /* =========================
    GALERIE EDITORIALE
 ========================= */
+/* =========================
+   GALERIE RESPONSIVE OPTIMISÉE
+========================= */
+
 .gallery {
-  width: 88%;
+  width: 90%;
   margin: 0 auto 120px auto;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 40px;
+}
+
+/* Desktop large : 4 colonnes */
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Desktop moyen / tablette : 3 colonnes */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile : 2 colonnes */
+@media (max-width: 767px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 .gallery img,
@@ -105,17 +130,9 @@ header img {
   height: auto;
   display: block;
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   border-radius: 6px;
-  .gallery img:hover,
-.gallery video:hover {
-  transform: scale(1.04);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-}
-
-}
 
 /* Footer */
 footer {
